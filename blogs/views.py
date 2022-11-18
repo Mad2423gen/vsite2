@@ -12,3 +12,7 @@ def index(request):
 def detail(request, blog_id):
     blog = Blog.objects.get(id=blog_id)
     return render(request, 'blogs/detail.html', {'blog': blog})
+
+
+def index2(request):
+    return render(request, 'blogs/index2.html')
