@@ -6,8 +6,7 @@ from .models import Blog
 
 # admin.site.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title_en', 'title_ja', 'text_en',
-                    'text_ja', 'created_datetime', 'updated_datetime')
+    list_display = ('id', 'title_ja', 'created_datetime', 'updated_datetime')
     list_display_links = ('id', 'title_ja')
 
 

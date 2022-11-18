@@ -5,7 +5,6 @@ from .models import Blog
 # Create your views here.
 def index(request):
     blogs = Blog.objects.order_by('-created_datetime')
-    # return render(request, 'blogs/index.html')
     return render(request, 'blogs/index.html', {'blogs': blogs})
 
 
@@ -14,5 +13,6 @@ def detail(request, blog_id):
     return render(request, 'blogs/detail.html', {'blog': blog})
 
 
-def index2(request):
-    return render(request, 'blogs/index2.html')
+# def index(request):
+#     blogs = Blog.objacts.order_by('-created_datetime')
+#     return render(request, 'blogs/index.html', {'blogs': blogs})
