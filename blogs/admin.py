@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Blog
+from .models import Blog, Category
 
 
 # admin.site.register(Blog)
@@ -10,4 +10,7 @@ class BlogAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'title_ja')
 
 
-admin.site.register(Blog, BlogAdmin)
+admin.site.register(Blog)
+admin.site.register(Category)
+
+
