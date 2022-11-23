@@ -16,22 +16,20 @@ def index(request):
     return render(request, 'blogs/index.html', {'blogs': blogs})
 
 
+# ブログ部=============================================================================
 def detail(request, blog_id):
     blog = Blog.objects.get(id=blog_id)
     return render(request, 'blogs/detail.html', {'blog': blog})
 
 
+# ブログ記事総一覧
 def detail_all(request):
     blog_all = Blog.objects.order_by('-id')
     return render(request, 'blogs/detail_all.html', {'blog_all': blog_all})
 
 
-def test(request):
-    janru_list = Category.objects.all()
-    return render(request, 'blogs/test.html', {'janru_list': janru_list})
-
-
 def genre_detail(request, genre_id):  # 親(Category)から逆参照してジャンル一覧を表示
     genre_details_obj = Category.objects.get(id=genre_id)
-    # janru_detail = janru_details_obj.blog_set.all()
-    return render(request, 'blogs/genre_detail_all.html', {'genre_details_obj': genre_details_obj})
+    return render(request, 'blogs/genre_detail_all.html',
+                  {'genre_details_obj': genre_details_obj})
+# ===================================================================================
