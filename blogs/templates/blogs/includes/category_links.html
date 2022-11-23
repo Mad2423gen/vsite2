@@ -1,0 +1,6 @@
+<div style="white-space:nowrap; width: 70%;margin: 0px auto;">
+    <p>カテゴリ</p>
+    {% for category in category_list %} &emsp;
+        <a href="{% url 'blogs:genre_detail' genre_id=category.id %}">{{ category }}</a>
+    {% endfor %}
+</div>

@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here
 class Category(models.Model):
-    name = models.CharField('Category', max_length=50)
+    name = models.CharField('category', max_length=50)
 
     def __str__(self):
         return self.name
@@ -15,11 +15,8 @@ class Blog(models.Model):
     text_en = models.TextField('text_en', blank=True)
     text_ja = models.TextField('text_ja', blank=True)
     created_datetime = models.DateTimeField('create_day', auto_now_add=True)
-    updated_datetime = models.DateTimeField('updata_day', auto_now=True)
+    updated_datetime = models.DateTimeField('update_day', auto_now=True)
+    category = models.ForeignKey(Category, verbose_name='category', on_delete=models.PROTECT)
 
     def __str__(self):
         return self.title_ja
-
-    class Meta:
-        verbose_name = 'Blog'
-        verbose_name_plural = 'Blog'

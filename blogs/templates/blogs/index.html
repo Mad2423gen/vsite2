@@ -137,7 +137,7 @@
 
         {% for blog in blogs %}
           <div>
-              <h2>{{ blog.title_en }}</h2>
+              <h4>{{ blog.title_en }}</h4>
               <h5>{{ blog.title_ja }}</h5>
               <div>{{ blog.text_ja | truncatechars:50}}</div>
               <div>{{ blog.text_en | truncatechars:50}}
@@ -197,7 +197,7 @@
 
 <footer class="blog-footer">
     <p>This website is deployed and updated by the developer Gen Nishzumi@Vickers</p>
-    <p>using Python+Django4.1+Nginx+Bootstrap5</p>
+    <p>using Python3.8+Django4.1+Nginx+Bootstrap5</p>
     <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 
 </footer>

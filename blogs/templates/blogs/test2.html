@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>janru_detail</title>
+</head>
+<body>
+    {% for detail in janru_details_obj.blog_set.all %}
+        <h4>{{detail.title_ja}}</h4>
+        <p>{{detail.text_ja}}</p>
+    {% endfor %}
+</body>
+</html>
