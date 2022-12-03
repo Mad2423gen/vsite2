@@ -32,4 +32,9 @@ def genre_detail(request, genre_id):  # 親(Category)から逆参照してジャ
     genre_details_obj = Category.objects.get(id=genre_id)
     return render(request, 'blogs/genre_detail_all.html',
                   {'genre_details_obj': genre_details_obj})
+
+
 # ===================================================================================
+# 価格表
+def price(request):
+    return render(request, 'blogs/price.html')

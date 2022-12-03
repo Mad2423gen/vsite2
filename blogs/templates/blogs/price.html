@@ -1,0 +1,97 @@
+{% extends "blogs/base.html" %}
+{% load static %}
+
+<!--ブロック開始-->
+{% block content %}
+<div class="container">
+    <div class="row align-self-center">
+         <h3 class="col bg-light" style="text-align: center;">Price/価格表</h3>
+    </div>
+    <br>
+
+<!--    スクレイピングツールセクション-->
+    <div class="row align-self-center">
+         <h4 class="col">Scrayping Tool(スクレイピングツール)</h4>
+    </div>
+    <br>
+
+    <div class="row align-self-center border border-secondary" style="text-align: center;">
+        <p></p><br>
+        <p>専門知識不要</p>
+        <p>最小限の操作でご利用いただけます</p>
+    </div>
+    <br>
+    <div class="row align-self-center">
+        <p>プログラムが指定された時刻や間隔で<b>WEBサイトを巡回し、表示されているデータを取得保存します。</b>
+        以下の機能などを追加可能。</p>
+    </div>
+    <div class="row align-self-center">
+        <ul>
+            <li>cvsやExellファイルで保存、保存先もGoogleDriveやDropboxなど、指定可能</li>
+            <li>GmailやLINEに通知</li>
+            <li>WEBページへ表示</li>
+            <li>botと連携、自動購入</li>
+            <li>PostgreSQL、 MySQLなどのデータベースへ保存、クエリ実行</li>
+            <li>その他取得データを活用するためのプログラムと連携</li>
+            <li>AWSやPVSへ設置、実行</li>
+            <li>ユーザー独自の計算方法や実行方法の組み込み</li>
+            <li>ランダムIPアドレスを使用してのスクレイピング</li>
+            <li>並列実行処理による高速化</li>
+        </ul>
+    </div>
+    <br>
+    <div class="row align-self-center" style="text-align: center;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">機能</th>
+                    <th scope="col">当社ツール</th>
+                    <th scope="col">ノンコードツール等</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Gmail、LINE通知</td>
+                    <td>◎</td>
+                    <td>△</td>
+                </tr>
+                <tr>
+                    <td scope="row">WEBサイトへ表示</td>
+                    <td>◎</td>
+                    <td>☓</td>
+                </tr>
+                <tr>
+                    <td scope="row">botと連携、自動購入実行</td>
+                    <td>◎</td>
+                    <td>☓</td>
+                </tr>
+                <tr>
+                    <td scope="row">SQLデータベース連携</td>
+                    <td>◎</td>
+                    <td>☓</td>
+                </tr>
+                <tr>
+                    <td scope="row">他社ツールと連携</td>
+                    <td>◎</td>
+                    <td>☓</td>
+                </tr>
+                <tr>
+                    <td scope="row">AWS,VPS設置</td>
+                    <td>◎</td>
+                    <td>△</td>
+                </tr>
+                <tr>
+                    <td scope="row">好みのカスタマイズ</td>
+                    <td>◎</td>
+                    <td>☓</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row align-self-center border border-secondary">
+        <img src="{% static 'img/scray_pic1.jpg' %}"
+             class="rounded mx-auto d-block" style="max-width: 70%;" alt="">
+    </div>
+</div>
+
+{% endblock %}
