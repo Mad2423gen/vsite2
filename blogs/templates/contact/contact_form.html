@@ -1,0 +1,23 @@
+{% extends "blogs/base.html" %}
+{% block content %}
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4>お問い合わせ</h4>
+                <hr>
+                <form action="{% url 'blogs:contact_form' %}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-secondary">送信</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+</body>
+{% endblock %}
