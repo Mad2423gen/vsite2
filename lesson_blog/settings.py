@@ -27,7 +27,7 @@ SECRET_KEY = get_random_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'vickers.pythonanywhere.com ']
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'vickers.pythonanywhere.com']
 
 # メールサーバー用
 EMAIL_HOST = 'smtp.gmail.com'
