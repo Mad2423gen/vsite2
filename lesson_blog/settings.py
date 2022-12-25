@@ -27,7 +27,7 @@ SECRET_KEY = get_random_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'vickers.pythonanywhere.com']
+ALLOWED_HOSTS = ['118.27.29.200', 'localhost']
 
 # メールサーバー用
 EMAIL_HOST = 'smtp.gmail.com'
@@ -130,9 +130,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     [
-        os.path.join(BASE_DIR, 'static'),
+        os.path.join(BASE_DIR, 'blogs/'),
     ]
 )
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
