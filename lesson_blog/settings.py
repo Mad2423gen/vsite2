@@ -27,14 +27,10 @@ SECRET_KEY = get_random_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['118.27.29.200', 'localhost']
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com', 'vickers.pythonanywhere.com']
 
 # メールサーバー用
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '2423gen@gmail.com'
-EMAIL_HOST_PASSWORD = 'iwrxehuzjblskqwo'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
 
 
 # Application definition
@@ -146,7 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
-try:
-    from .local_settings import *
-except:
-    pass
+# try:
+#     from .local_settings import *
+# except:
+#     pass
